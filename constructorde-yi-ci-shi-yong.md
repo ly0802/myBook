@@ -4,17 +4,17 @@
 
 #### 快游戏引擎代码
 
-canvas的实现类HTMLCanvasElement.js
+canvas 的实现类 HTMLCanvasElement.js
 
-```
+```js
 class HTMLCanvasElement {
   // xxx
 }
 ```
 
-引擎对外暴露的创建canvas的api是qg.createCanvas\(\)
+引擎对外暴露的创建 canvas 的 api 是 qg.createCanvas\(\)
 
-```
+```js
 qg.createCanvas = function() {
     return new HTMLCanvasElement()
 }
@@ -22,9 +22,9 @@ qg.createCanvas = function() {
 
 #### h5适配层代码
 
-适配层的HTMLCanvasElement实现
+适配层的 HTMLCanvasElement 实现
 
-```
+```js
 window.HTMLCanvasElement = function() {
     return qg.createCanvas()
 }
@@ -32,18 +32,31 @@ window.HTMLCanvasElement = function() {
 
 #### cp游戏代码
 
-在cp代码里有一段canvas的类型判断
+在 cp 代码里有一段 canvas 的类型判断
+
+```js
+const canvas = new window.HTMLCanvasElement()
+
+canvas instanceof window.HTMLCanvasElement
+```
+
+希望` canvas instanceof window.HTMLCanvasElement `输出 true，但是输出了 false，为什么？
+
+## 原因分析
+
+[instanceof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 是如何进行类型判断的？
+
+```js
+object instanceof constructor
+```
+
+instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
 
 ```
 const canvas = new window.HTMLCanvasElement()
-
-if (canvas instanceof window.HTMLCanvasElement) {
-    console.log(true)
-}
-else {
-    console.log(false)
-}
 ```
+
+canvas 对象是
 
 
 
