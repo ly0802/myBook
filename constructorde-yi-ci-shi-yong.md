@@ -58,14 +58,16 @@ instanceof 运算符用来检测 constructor.prototype 是否存在于参数 obj
 canvas ---> Canvas.prototype ---> Object.prototype ---> null
 ```
 
-`canvas` 对象的原型链上并没有 `window.HTMLCanvasElement.prototype`，所以输出 false。
+`canvas` 对象的原型链上并没有 `window.HTMLCanvasElement.prototype`，所以输出 false。如果 window.HTMLCanvasElement 就是 Canvas，就可以输出 true。
 
 ## 解决方案
 
-如果 window.HTMLCanvasElement 
+修改 h5 适配层 HTMLCanvasElement 的实现：
 
-```
+```js
+const canvas = qg.createCanvas()
 
+window.HTMLCanvasElement = canvas.constructor
 ```
 
 
