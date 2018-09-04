@@ -41,7 +41,7 @@ if (canvas instanceof window.HTMLCanvasElement) {
     console.log(true)
 }
 else {
-    console.log(true)
+    console.log(false)
 }
 ```
 
