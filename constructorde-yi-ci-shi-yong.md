@@ -70,5 +70,5 @@ const canvas = qg.createCanvas()
 window.HTMLCanvasElement = canvas.constructor
 ```
 
-
+通过 canvas.constructor 来获取引擎里的 Canvas
 
