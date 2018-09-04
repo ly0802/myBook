@@ -40,7 +40,7 @@ const canvas = new window.HTMLCanvasElement()
 canvas instanceof window.HTMLCanvasElement
 ```
 
-希望` canvas instanceof window.HTMLCanvasElement `输出 true，但是输出了 false，为什么？
+希望`canvas instanceof window.HTMLCanvasElement`输出 true，但是输出了 false，为什么？
 
 ## 原因分析
 
@@ -50,13 +50,11 @@ canvas instanceof window.HTMLCanvasElement
 object instanceof constructor
 ```
 
-instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
+instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
 
-```
+```js
 const canvas = new window.HTMLCanvasElement()
 ```
 
 canvas 对象是
-
-
 
