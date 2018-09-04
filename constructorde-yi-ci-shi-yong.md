@@ -40,6 +40,9 @@ const canvas = new window.HTMLCanvasElement()
 if (canvas instanceof window.HTMLCanvasElement) {
     console.log(true)
 }
+else {
+    console.log(true)
+}
 ```
 
 
