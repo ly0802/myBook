@@ -70,5 +70,5 @@ const canvas = qg.createCanvas()
 window.HTMLCanvasElement = canvas.constructor
 ```
 
-通过 canvas.constructor 来获取引擎里的 Canvas
+window.HTMLCanvasElement 指向引擎里 Canvas 的构造函数，所以 `canvas instanceof window.HTMLCanvasElement` 就可以输出 true了。
 
