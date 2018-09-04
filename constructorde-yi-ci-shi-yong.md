@@ -4,11 +4,11 @@
 
 #### 快游戏引擎代码
 
-canvas 的实现类 HTMLCanvasElement.js
+canvas 的实现类 Canvas.js
 
 ```js
-class HTMLCanvasElement {
-  // xxx
+class Canvas {
+  // 调用c++注册的api
 }
 ```
 
@@ -16,7 +16,7 @@ class HTMLCanvasElement {
 
 ```js
 qg.createCanvas = function() {
-    return new HTMLCanvasElement()
+    return new Canvas()
 }
 ```
 
@@ -52,9 +52,21 @@ object instanceof constructor
 
 instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。
 
-```js
-const canvas = new window.HTMLCanvasElement()
+我们来看下 cp 创建的 `canvas` 对象的原型链：
+
+```
+canvas ---> Canvas.prototype ---> Object.prototype ---> null
 ```
 
-canvas 对象是
+`canvas` 对象的原型链上并没有 `window.HTMLCanvasElement.prototype`，所以输出 false。
+
+## 解决方案
+
+如果 window.HTMLCanvasElement 
+
+```
+
+```
+
+
 
