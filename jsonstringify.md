@@ -76,5 +76,17 @@ JSON.stringify(obj, replacer)
 // "{"x":"new property","y":"undefined","z":"function(){return 'foo'}"}"
 ```
 
+```
+const obj = {
+    x: 1,
+    y: 2,
+    z: 3
+}
+
+
+JSON.stringify(obj, ['x', 'y'])
+// "{"x":1,"y":2}"
+```
+
 
 
