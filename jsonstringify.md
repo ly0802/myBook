@@ -52,6 +52,7 @@ JSON.stringify(value[, replacer])
 
 ```js
 // replacer函数
+
 const replacer = function(key, value){
     if(typeof(value) === 'function'){
          return Function.prototype.toString.call(value)
