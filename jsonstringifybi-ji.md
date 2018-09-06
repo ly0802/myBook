@@ -16,6 +16,24 @@ JSON.stringify(value[, replacer [, space]])
 | 数组 | 只有包含在这个数组中的属性才会被序列化到最终的JSON字符串中 |
 | null或未提供 | value的所有属性都会被序列化 |
 
+```js
+var replacer = function(key,value){
+    if(typeof(value) == 'function'){
+         return Function.prototype.toString.call(value)
+    }
+    return value
+}
+var foo = {
+    bar: "new property",
+    baz: 3,
+    getName: function(){return 'foo'}
+}
+
+console.log(JSON.stringify(foo,censor))
+```
+
+
+
 关于序列化，有下面五点注意事项：
 
 * 非数组对象的属性不能保证以特定的顺序出现在序列化后的字符串中。
