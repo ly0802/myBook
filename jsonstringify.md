@@ -20,7 +20,6 @@ obj1.x = obj2
 obj2.x = obj1
 
 JSON.stringify(obj1)
-
 // Uncaught TypeError: Converting circular structure to JSON
 //   at JSON.stringify (<anonymous>)
 //   at <anonymous>:1:6
@@ -28,12 +27,12 @@ JSON.stringify(obj1)
 
 3.不可枚举的属性会被忽略
 
-```
+```js
 const obj = {x: 1}
 
 Object.defineProperty(obj, 'y', {value: 2})
-JSON.stringify(obj)
 
+JSON.stringify(obj)
 // "{"x":1}"
 ```
 
