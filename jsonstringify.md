@@ -10,5 +10,7 @@ JSON.stringify([undefined, Object, Symbol("")]);
 // "[null,null,null]"
 ```
 
+2.对 包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误
+
 
 
