@@ -66,7 +66,7 @@ const obj = {
 }
 
 console.log(JSON.stringify(obj, replacer))
-// {"bar":"new property","baz":3,"getName":"function(){return 'foo'}"}
+// "{"bar":"new property","baz":3,"getName":"function(){return 'foo'}"}"
 ```
 
 
