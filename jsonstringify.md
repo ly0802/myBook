@@ -58,6 +58,7 @@ const replacer = function(key, value){
     }
     return value
 }
+
 // 待序列化对象
 const obj = {
     bar: "new property",
