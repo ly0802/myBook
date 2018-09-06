@@ -38,3 +38,17 @@ JSON.stringify(obj)
 
 4.JSON.stringify\(\) 接受第二参数
 
+```
+JSON.stringify(value[, replacer])
+```
+
+参数 replacer ：
+
+| replacer | 描述 |
+| :--- | :--- |
+| 函数 | value的每个属性都会经过该函数的转换和处理，函数有两个参数: 键\(key\)值\(value\) |
+| 数组 | 只有包含在这个数组中的属性才会被序列化到最终的JSON字符串中 |
+| null或未提供 | value的所有属性都会被序列化 |
+
+
+
