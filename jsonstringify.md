@@ -109,7 +109,7 @@ JSON.stringify(value[, replacer[, space]])
 
 对象的 toJSON 方法会覆盖该对象默认的序列化行为：不是那个对象被序列化，而是调用`toJSON`方法后的返回值会被序列化。
 
-```
+```js
 const obj = {
   x: '1',
   toJSON: function () {
@@ -119,6 +119,9 @@ const obj = {
 
 JSON.stringify(obj); 
 // ""2""
+
+JSON.stringify({y: obj})
+// "{"y":"2"}"
 ```
 
 
