@@ -77,13 +77,14 @@ JSON.stringify(obj, replacer)
 ```
 
 ```js
+// replacer 为数组
+
 const obj = {
     x: 1,
     y: 2,
     z: 3
 }
 
-// replacer 为数组
 JSON.stringify(obj, ['x', 'y'])
 // "{"x":1,"y":2}"
 ```
