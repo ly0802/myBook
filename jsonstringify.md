@@ -115,9 +115,9 @@ const obj = {
   toJSON: function () {
     return '2';
   }
-};
+}
 
-JSON.stringify(obj); 
+JSON.stringify(obj)
 // ""2""
 
 JSON.stringify({y: obj})
