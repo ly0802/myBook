@@ -36,7 +36,7 @@ JSON.stringify(obj)
 // "{"x":1}"
 ```
 
-4.JSON.stringify\(\) 接受第二参数
+4.JSON.stringify\(\) 可接受第二个参数
 
 ```
 JSON.stringify(value[, replacer])
@@ -88,6 +88,37 @@ const obj = {
 
 JSON.stringify(obj, ['x', 'y'])
 // "{"x":1,"y":2}"
+```
+
+5.JSON.stringify\(\) 可接受第三个参数
+
+```
+JSON.stringify(value[, replacer[, space]])
+```
+
+参数 space 用来控制结果字符串里面的间距。
+
+| space | 描述 |
+| :--- | :--- |
+| 数字 | 在字符串化时每一级别会比上一级别缩进多这个数字值的空格（最多10个空格） |
+| 字符串 | 每一级别会比上一级别多缩进用该字符串（或该字符串的前十个字符） |
+
+![](/assets/space@2x.png)
+
+6.对象有 toJSON 方法
+
+对象的 toJSON 方法会覆盖该对象默认的序列化行为：不是那个对象被序列化，而是调用`toJSON`方法后的返回值会被序列化。
+
+```
+const obj = {
+  x: '1',
+  toJSON: function () {
+    return '2';
+  }
+};
+
+JSON.stringify(obj); 
+// ""2""
 ```
 
 
