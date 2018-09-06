@@ -5,7 +5,7 @@ undefined、任意的函数以及 symbol 值，在序列化过程中会被忽略
 ```
 JSON.stringify({x: undefined, y: Object, z: Symbol("")}); 
 
-//"{}"
+// "{}"
 ```
 
 
