@@ -10,7 +10,7 @@ JSON.stringify([undefined, Object, Symbol("")]);
 // "[null,null,null]"
 ```
 
-2.对 包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误
+2.对 包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误 Converting circular structure to JSON
 
 ```js
 const obj1 = {}
@@ -24,6 +24,17 @@ JSON.stringify(obj1)
 // Uncaught TypeError: Converting circular structure to JSON
 //   at JSON.stringify (<anonymous>)
 //   at <anonymous>:1:6
+```
+
+3.不可枚举的属性会被忽略
+
+```
+const obj = {x: 1}
+
+Object.defineProperty(obj, 'y', {value: 2})
+JSON.stringify(obj)
+
+// "{"x":1}"
 ```
 
 
