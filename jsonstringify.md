@@ -105,7 +105,7 @@ JSON.stringify(value[, replacer[, space]])
 
 ![](/assets/space@2x.png)
 
-6.对象有 toJSON 方法
+6.对象有 toJSON 方法情况
 
 对象的 toJSON 方法会覆盖该对象默认的序列化行为：不是那个对象被序列化，而是调用`toJSON`方法后的返回值会被序列化。
 
