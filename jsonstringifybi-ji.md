@@ -17,13 +17,13 @@ JSON.stringify(value[, replacer [, space]])
 | null或未提供 | value的所有属性都会被序列化 |
 
 ```js
-var replacer = function(key,value){
+const replacer = function(key,value){
     if(typeof(value) == 'function'){
          return Function.prototype.toString.call(value)
     }
     return value
 }
-var obj = {
+const obj = {
     bar: "new property",
     baz: 3,
     getName: function(){return 'foo'}
