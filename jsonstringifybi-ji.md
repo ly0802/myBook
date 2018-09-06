@@ -23,16 +23,15 @@ var replacer = function(key,value){
     }
     return value
 }
-var foo = {
+var obj = {
     bar: "new property",
     baz: 3,
     getName: function(){return 'foo'}
 }
 
-console.log(JSON.stringify(foo,censor))
+console.log(JSON.stringify(obj, replacer))
+//{"bar":"new property","baz":3,"getName":"function(){return 'foo'}"}
 ```
-
-
 
 关于序列化，有下面五点注意事项：
 
