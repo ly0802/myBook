@@ -36,5 +36,5 @@ JSON.stringify(obj)
 // "{"x":1}"
 ```
 
-
+4.JSON.stringify\(\) 接受第二参数
 
