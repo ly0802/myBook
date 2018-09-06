@@ -50,5 +50,24 @@ JSON.stringify(value[, replacer])
 | 数组 | 只有包含在这个数组中的属性才会被序列化到最终的JSON字符串中 |
 | null或未提供 | value的所有属性都会被序列化 |
 
+```
+// replacer函数
+const replacer = function(key, value){
+    if(typeof(value) === 'function'){
+         return Function.prototype.toString.call(value)
+    }
+    return value
+}
+// 待序列化对象
+const obj = {
+    bar: "new property",
+    baz: 3,
+    getName: function(){return 'foo'}
+}
+
+console.log(JSON.stringify(obj, replacer))
+//{"bar":"new property","baz":3,"getName":"function(){return 'foo'}"}
+```
+
 
 
