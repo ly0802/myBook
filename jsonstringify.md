@@ -56,18 +56,23 @@ const replacer = function(key, value){
     if(typeof(value) === 'function'){
          return Function.prototype.toString.call(value)
     }
+    
+    if(value === undefined){
+         return 'undefined'
+    }
+    
     return value
 }
 
 // 待序列化对象
 const obj = {
     bar: "new property",
-    baz: 3,
+    baz: undefined,
     getName: function(){return 'foo'}
 }
 
 JSON.stringify(obj, replacer)
-// "{"bar":"new property","baz":3,"getName":"function(){return 'foo'}"}"
+// "{"bar":"new property","baz":"undefined","getName":"function(){return 'foo'}"}"
 ```
 
 
