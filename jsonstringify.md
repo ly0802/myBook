@@ -12,5 +12,19 @@ JSON.stringify([undefined, Object, Symbol("")]);
 
 2.对 包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误
 
+```js
+const obj1 = {}
+const obj2 = {}
+
+obj1.x = obj2
+obj2.x = obj1
+
+JSON.stringify(obj1)
+
+// Uncaught TypeError: Converting circular structure to JSON
+//   at JSON.stringify (<anonymous>)
+//   at <anonymous>:1:6
+```
+
 
 
