@@ -18,7 +18,7 @@ JSON.stringify(value[, replacer [, space]])
 
 ```js
 const replacer = function(key, value){
-    if(typeof(value) == 'function'){
+    if(typeof(value) === 'function'){
          return Function.prototype.toString.call(value)
     }
     return value
