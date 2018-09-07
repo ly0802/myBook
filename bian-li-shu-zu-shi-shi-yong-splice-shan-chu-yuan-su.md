@@ -85,6 +85,7 @@ var arr = new Array(1, 2, 3, 4, 5);     //初始化数字集合
 var delete_number = 3;    //要被删除的数字
 
 arr = arr.filter(function(item){ return item !== delete_number});
+// [1, 2, 4, 5]
 ```
 
 #### 参考文章
