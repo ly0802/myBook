@@ -80,7 +80,7 @@ for(var i=0; i<arr.length; ){
 
 也可以使用filter这种取巧的方式，不需要再原数组上删除元素
 
-```
+```js
 var arr = new Array(1, 2, 3, 4, 5);     //初始化数字集合
 var delete_number = 3;    //要被删除的数字
 
