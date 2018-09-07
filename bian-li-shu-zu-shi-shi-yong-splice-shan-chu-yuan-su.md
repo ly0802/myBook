@@ -52,5 +52,45 @@ for(var i=0; i<arr.length; i++){
 5 未被删除
 ```
 
+也可以
+
+```
+var arr = new Array(1, 2, 3, 4, 5);     //初始化数字集合
+var delete_number = 3;    //要被删除的数字
+
+//遍历数组
+for(var i=0; i<arr.length; ){
+    if(arr[i] === delete_number){   
+        var num = arr.splice( i, 1 );   
+        console.log("成功删除 "+num);    
+    }
+    else{
+        console.log(arr[i]+" 未被删除");   
+        i++；      //只有在没有删除元素时才对索引 i++
+    }
+}
+
+// 输出：
+1 未被删除
+2 未被删除
+成功删除 3
+4 未被删除
+5 未被删除
+```
+
+也可以使用filter这种取巧的方式，不需要再原数组上删除元素
+
+```
+var arr = ["a","b","c","a",'a',"b"];
+var ele = "a";
+arr =arr.filter(function(item){ return item!==ele});
+
+
+```
+
+#### 参考文章
+
+* [JS的splice\(\)方法在for循环中使用可能会遇到的坑](https://blog.csdn.net/a727911438/article/details/55224532)
+
 
 
