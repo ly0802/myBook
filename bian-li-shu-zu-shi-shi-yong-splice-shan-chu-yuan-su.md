@@ -92,7 +92,7 @@ arr = arr.filter(function(item){ return item !== delete_number});
 
 * [JS的splice\(\)方法在for循环中使用可能会遇到的坑](https://blog.csdn.net/a727911438/article/details/55224532)
 
-* [https://majing.io/posts/10000006121204](https://majing.io/posts/10000006121204 "JavaScript使用for循环和splice删除数组指定元素的注意点")
+* [JavaScript使用for循环和splice删除数组指定元素的注意点](https://majing.io/posts/10000006121204)
 
 
 
