@@ -10,7 +10,7 @@ JSON.stringify([undefined, Object, Symbol("")]);
 // "[null,null,null]"
 ```
 
-2.对 包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误 Converting circular structure to JSON
+2.对包含循环引用的对象（对象之间相互引用，形成无限循环\) 序列话时，会抛出错误 Converting circular structure to JSON
 
 ```js
 const obj1 = {}
@@ -51,7 +51,7 @@ JSON.stringify(value[, replacer])
 | null或未提供 | value的所有属性都会被序列化 |
 
 ```js
-// replacer函数
+// replacer 为函数
 
 const replacer = function(key, value){
     if(typeof(value) === 'function'){
