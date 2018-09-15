@@ -124,5 +124,9 @@ JSON.stringify({y: obj})
 // "{"y":"2"}"
 ```
 
+### 参考文章
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/JSON/stringify
+
 
 
