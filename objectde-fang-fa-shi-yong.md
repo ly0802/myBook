@@ -7,7 +7,9 @@
 设置一个指定的对象的原型 \( 即, 内部\[\[Prototype\]\]属性）到另一个对象或 null
 
 ```js
-const A = class{ print(){ } }
+const A = class{
+    print(){ } 
+}
 const dict = Object.setPrototypeOf({}, A.prototype)
 
 dict.__proto__ === A.prototype // true
