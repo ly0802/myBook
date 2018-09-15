@@ -45,6 +45,8 @@ me.__proto__ === person // true
 
 ### 参考文章
 
+* [Object.create\(\)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
 * [Object.getPrototypeOf\(\)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf)
 
 
