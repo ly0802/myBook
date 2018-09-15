@@ -43,5 +43,9 @@ const me = Object.create(person)
 me.__proto__ === person // true
 ```
 
+### 参考文章
+
+* [Object.getPrototypeOf\(\)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf)
+
 
 
