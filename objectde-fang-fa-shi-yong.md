@@ -14,7 +14,7 @@ dict.__proto__ === A.prototype // true
 Object.getPrototypeOf(dict) === A.prototype // true
 ```
 
-### Object.getPrototypeOf\(\)
+### Object.getPrototypeOf\(obj\)
 
 返回指定对象的原型（内部\[\[Prototype\]\]属性的值）
 
