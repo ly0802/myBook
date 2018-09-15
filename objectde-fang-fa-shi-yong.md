@@ -18,6 +18,13 @@ Object.getPrototypeOf(dict) === A.prototype // true
 
 返回指定对象的原型（内部\[\[Prototype\]\]属性的值）
 
+```
+const prototype1 = {};
+const object1 = Object.create(prototype1);
+
+Object.getPrototypeOf(object1) === prototype1 // true
+```
+
 ### Object.create\(obj\)
 
 创建一个新对象，使用现有的对象来提供新创建的对象的\_\_proto\_\_
