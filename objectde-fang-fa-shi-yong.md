@@ -7,8 +7,8 @@
 设置一个指定的对象的原型 \( 即, 内部\[\[Prototype\]\]属性）到另一个对象或 null
 
 ```js
-const A = class{
-    print(){ } 
+class A{
+    print(){} 
 }
 const dict = Object.setPrototypeOf({}, A.prototype)
 
@@ -21,10 +21,13 @@ Object.getPrototypeOf(dict) === A.prototype // true
 返回指定对象的原型（内部\[\[Prototype\]\]属性的值）
 
 ```js
-const prototype1 = {};
-const object1 = Object.create(prototype1);
+const prototype1 = {}
+const object1 = Object.create(prototype1)
 
 Object.getPrototypeOf(object1) === prototype1 // true
+
+const reg = /a/
+Object.getPrototypeOf(reg) === RegExp.prototype // true
 ```
 
 ### Object.create\(obj\)
