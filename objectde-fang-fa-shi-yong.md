@@ -18,7 +18,7 @@ Object.getPrototypeOf(dict) === A.prototype // true
 
 返回指定对象的原型（内部\[\[Prototype\]\]属性的值）
 
-```
+```js
 const prototype1 = {};
 const object1 = Object.create(prototype1);
 
